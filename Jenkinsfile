@@ -7,13 +7,12 @@ pipeline {
         sh './mvnw clean package -DskipTests'
       }
     }
-     stages {
-            stage('Docker Test') {
-                steps {
-                    sh 'docker --version'
-                }
-            }
-     }
+
+    stage('Docker Test') {
+      steps {
+          sh 'docker --version'
+      }
+    }
 
     stage('Docker Build & Tag') {
       steps {
