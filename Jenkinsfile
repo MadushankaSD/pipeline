@@ -1,11 +1,6 @@
 pipeline {
   agent any
 
-  environment {
-    IMAGE_NAME = 'docker'
-    IMAGE_TAG = 'latest'
-  }
-
   stages {
     stage('Build Spring Boot App') {
       steps {
