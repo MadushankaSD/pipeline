@@ -12,7 +12,7 @@ pipeline {
     stage('Docker Build & Tag') {
       steps {
         sh 'docker build -t $DOCKER_REPO .'
-        sh 'docker tag myjava1 $DOCKER_REPO'
+        sh 'docker tag myfirst-docker-repo $DOCKER_REPO'
       }
     }
 
