@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME = 'madushanka7/myfirst-docker-repo'   // Replace with your DockerHub username/repo
-    IMAGE_TAG = 'latest'                    // Optional: can use build number or Git hash
+    IMAGE_NAME = 'docker'
+    IMAGE_TAG = 'latest'
   }
 
   stages {
@@ -15,7 +15,7 @@ pipeline {
 
     stage('Docker Build & Tag') {
       steps {
-        sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
+        sh 'docker build -t madushanka7/myfirst-docker-repo:latest .'
         sh 'docker tag myjava1 $DOCKER_BFLASK_IMAGE'
       }
     }
